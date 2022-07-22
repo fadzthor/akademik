@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_header.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PB1.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PB2.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PB3.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PB4.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PP1.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PP2.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PP3.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_PP4.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pb1.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pb3.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pb4.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pp1.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pp2.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pp3.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_menu_pp4.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/drawable/background_white.xml" value="0.115" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/activity_jadwal.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/activity_profile.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/activity_register_user.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/fragment_notifications.xml" value="0.209375" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/AndroidStudioProjects/Akademik/app/src/main/res/menu/bottom_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
