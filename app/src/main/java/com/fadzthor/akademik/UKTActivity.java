@@ -23,16 +23,16 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-public class KRSActivity extends AppCompatActivity implements View.OnClickListener {
-    private String npm, detailKRS;
-    private TextView tvKRS;
+public class UKTActivity extends AppCompatActivity implements View.OnClickListener {
+    private String npm, detailUKT;
+    private TextView tvUKT;
     private Button btnLoad;
     private ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_krs);
+        setContentView(R.layout.activity_ukt);
 
         load();
 
@@ -41,7 +41,7 @@ public class KRSActivity extends AppCompatActivity implements View.OnClickListen
             npm = bundle.getString("username");
         }
 
-        tvKRS = findViewById(R.id.TextViewKRS);
+        tvUKT = findViewById(R.id.TextViewUKT);
 
         btnLoad.setOnClickListener(this);
 
@@ -55,20 +55,20 @@ public class KRSActivity extends AppCompatActivity implements View.OnClickListen
 
     @Override
     public void onClick(View view) {
-        loaddataKRS(npm);
-        detailKRS ="";
+        loaddataUKT(npm);
+        detailUKT = "";
 
-        detailKRS = SetterGetter.getKRS();
+        detailUKT = SetterGetter.getUKT();
 
-        tvKRS.setText(detailKRS);
+        tvUKT.setText(detailUKT);
     }
 
-    private void loaddataKRS(String npm) {
+    private void loaddataUKT(String npm) {
         progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
-                Constants.URL_KRS,
+                Constants.URL_UKT,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -78,21 +78,22 @@ public class KRSActivity extends AppCompatActivity implements View.OnClickListen
                             JSONArray jsonArray = jsonObject.getJSONArray("data");
                             if (!jsonObject.getBoolean("error")) {
                                 jsonArray.length();
-                                String dataKRS ="";
-                                String KRS = "";
+                                String dataUKT ="";
+                                String UKt = "";
                                 for (int i=0; i < jsonArray.length();
                                      i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
-                                    String Nama_Mtk = object.getString("Nama_Mtk");
-                                    String Jml_Sks = object.getString("Jml_Sks");
-                                    String Nama_Dosen = object.getString("Nama_Dosen");
+                                    String Jenjang = object.getString("Jenjang");
+                                    String Nama_Prodi = object.getString("Nama_Prodi");
+                                    String UKT = object.getString("UKT");
 
-                                    KRS = "Matakuliah : " + Nama_Mtk + "\n" +
-                                          "SKS        : " + Jml_Sks + "\n" +
-                                          "Nama Dosen : " + Nama_Dosen + "\n" ;
-                                    dataKRS = dataKRS+KRS;
+                                    UKt = "Jenjang       : " + Jenjang + "\n" +
+                                          "Program Studi : " + Nama_Prodi + "\n" +
+                                          "UKT           : " + UKT + "\n" ;
+
+                                    dataUKT = dataUKT+UKt;
                                 }
-                                SetterGetter.setKRS(dataKRS);
+                                SetterGetter.setUKT(dataUKT);
                             } else {
                                 Toast.makeText(
                                         getApplicationContext(),

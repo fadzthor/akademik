@@ -24,8 +24,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener {
-    private String nama, prodi, semester, npm, detailProfil, detailNama, detailSemester, detailProdi;
-    private TextView tvNama, tvSemester, tvProdi, tvProfil;
+    private String npm, detailProfil;
+    private TextView tvProfil;
     private Button btnLoad;
     private ProgressDialog progressDialog;
 
@@ -43,10 +43,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         tvProfil = findViewById(R.id.TextViewProfil);
 
-//        tvNama = findViewById(R.id.tvNama);
-//        tvProdi = findViewById(R.id.tvProdi);
-//        tvSemester = findViewById(R.id.tvSemester);
-
         btnLoad.setOnClickListener(this);
 
         progressDialog = new ProgressDialog(this);
@@ -60,21 +56,10 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View view) {
         loaddataprofil(npm);
-        detailProfil ="";
-//        detailNama="";
-//        detailProdi="";
-//        detailSemester="";
 
         detailProfil = SetterGetter.getProfil();
 
-//        nama = SetterGetter.getNama();
-//        prodi = SetterGetter.getProdi();
-//        semester = SetterGetter.getSemester();
-
         tvProfil.setText(detailProfil);
-//        tvNama.setText(detailNama);
-//        tvProdi.setText(detailProdi);
-//        tvSemester.setText(detailSemester);
     }
 
     private void loaddataprofil(String npm) {
@@ -94,9 +79,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                                 jsonArray.length();
                                 String dataprofil ="";
                                 String profil = "";
-//                                String dataNama = "";
-//                                String dataProdi = "";
-//                                String dataSemester = "";
+
                                 for (int i=0; i < jsonArray.length();
                                      i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
@@ -110,19 +93,9 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                                              "Jenjang  : " + Jenjang + "\n" +
                                              "Prodi    : " + Nama_Prodi + "\n" ;
 
-
-//                                    dataNama = nama;
-//                                    dataProdi = prodi;
-//                                    dataSemester = semester;
-////                                    tvNama.setText(nama);
-////                                    tvProdi.setText(prodi);
-////                                    tvSemester.setText(semester);
                                     dataprofil = profil;
                                 }
                                 SetterGetter.setProfil(dataprofil);
-//                                SetterGetter.setNama(jsonObject.getString(dataNama));
-//                                SetterGetter.setProdi(jsonObject.getString(dataProdi));
-//                                SetterGetter.setSemester(jsonObject.getString(dataSemester));
 
                             } else {
                                 Toast.makeText(

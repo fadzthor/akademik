@@ -46,18 +46,11 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     private boolean loadFragment(Fragment fragment) {
         if (fragment != null) {
 
-//            username =  SahredPrefManager.getInstance(this).getUsername().toString();
             username = SetterGetter.getUsername();
-//            nama = SetterGetter.getNama();
-//            prodi = SetterGetter.getProdi();
-//            jenjang = SetterGetter.getJenjang();
-//            semester = SetterGetter.getSemester();
+
             Bundle datauser = new Bundle();
             datauser.putString("username",username);
-//            datauser.putString("Nama_Mhs",nama);
-//            datauser.putString("Nama_Prodi",prodi);
-//            datauser.putString("Jenjang",jenjang);
-//            datauser.putString("Semester",semester);
+
             fragment.setArguments(datauser);
 
             getSupportFragmentManager()

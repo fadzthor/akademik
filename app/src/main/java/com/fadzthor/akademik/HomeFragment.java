@@ -24,7 +24,7 @@ public class HomeFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     private String username, namaMhs;
     private TextView tvNamamhs, tvProdi, tvSemester;
-    private ImageView imageViewJadwal,imageViewProfile,imageViewKRS;
+    private ImageView imageViewJadwal,imageViewProfile,imageViewKRS, imageViewUKT;
 
 
     // TODO: Rename and change types of parameters
@@ -73,6 +73,7 @@ public class HomeFragment extends Fragment {
         imageViewJadwal = view.findViewById(R.id.imageViewJadwal);
         imageViewProfile = view.findViewById(R.id.imageViewProfile);
         imageViewKRS = view.findViewById(R.id.imageViewKRS);
+        imageViewUKT = view.findViewById(R.id.imageViewUKT);
 
         if (getArguments() != null) {
             username = getArguments().getString("username");
@@ -112,6 +113,17 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        imageViewUKT.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle bundle = new Bundle();
+                bundle.putString("username",username);
+
+                Intent intent = new Intent(getActivity(),UKTActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         // Inflate the layout for this fragment
         return view;
 //        return inflater.inflate(R.layout.fragment_home, container, false);

@@ -49,14 +49,6 @@ public class LoginActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("Please wait...");
 
-//        btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent(LoginActivity.this, MainActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -100,10 +92,6 @@ public class LoginActivity extends AppCompatActivity {
                                             );
 
                                     SetterGetter.setUsername(jsonObject.getString("username"));
-//                                    SetterGetter.setProdi(jsonObject.getString("Nama_Prodi"));
-//                                    SetterGetter.setSemester(jsonObject.getString("Semester"));
-//                                    SetterGetter.setNama(jsonObject.getString("Nama_Mhs"));
-//                                    SetterGetter.setJenjang(jsonObject.getString("Jenjang"));
 
                                     startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                     finish();
